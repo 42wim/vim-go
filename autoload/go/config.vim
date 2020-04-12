@@ -267,7 +267,7 @@ function! go#config#MetalinterAutosaveEnabled() abort
   let l:default_enabled = ["vet", "golint"]
 
   if go#config#MetalinterCommand() == "golangci-lint"
-    let l:default_enabled = ["govet", "golint"]
+    let l:default_enabled = []
   endif
 
   return get(g:, "go_metalinter_autosave_enabled", default_enabled)
@@ -277,7 +277,7 @@ function! go#config#MetalinterEnabled() abort
   let l:default_enabled = ["vet", "golint", "errcheck"]
 
   if go#config#MetalinterCommand() == "golangci-lint"
-    let l:default_enabled = ["govet", "golint"]
+    let l:default_enabled = []
   endif
 
   return get(g:, "go_metalinter_enabled", default_enabled)

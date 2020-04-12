@@ -412,7 +412,7 @@ function! s:golangcilintcmd(bin_path, haslinter)
   let cmd += ["--exclude-use-default=false"]
 
   if a:haslinter
-    let cmd += ["--disable-all"]
+    "let cmd += ["--disable-all"]
   endif
 
   return cmd
